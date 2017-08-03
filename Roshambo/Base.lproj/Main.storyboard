@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Choice View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ChoiceViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9E1-zI-58P">
+                                <rect key="frame" x="145.5" y="204" width="84" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="K4p-Zy-Ahj"/>
+                                </constraints>
+                                <state key="normal" image="paper"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TG-0E-UXY">
+                                <rect key="frame" x="245.5" y="204" width="84" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="f3E-FI-Nf8"/>
+                                </constraints>
+                                <state key="normal" image="scissors"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3c-4R-urq">
+                                <rect key="frame" x="45.5" y="204" width="84" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="1Dn-y1-KaS"/>
+                                    <constraint firstAttribute="width" constant="84" id="cgm-X5-33i"/>
+                                </constraints>
+                                <state key="normal" image="rock"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc9-Pk-CHI">
+                                <rect key="frame" x="128.5" y="319" width="118" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91607958078384399" green="0.94715338945388794" blue="0.78922575712203979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j3c-4R-urq" firstAttribute="bottom" secondItem="9E1-zI-58P" secondAttribute="bottom" id="2tu-5A-ZWb"/>
+                            <constraint firstItem="j3c-4R-urq" firstAttribute="leading" secondItem="9E1-zI-58P" secondAttribute="leading" constant="-100" id="8gd-FX-EC4"/>
+                            <constraint firstItem="cc9-Pk-CHI" firstAttribute="top" secondItem="9E1-zI-58P" secondAttribute="bottom" constant="50" id="NLE-7s-EoA"/>
+                            <constraint firstItem="cc9-Pk-CHI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Obt-zy-1fk"/>
+                            <constraint firstItem="9E1-zI-58P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZTK-KM-EER"/>
+                            <constraint firstItem="8TG-0E-UXY" firstAttribute="bottom" secondItem="9E1-zI-58P" secondAttribute="bottom" id="kQR-zt-ImY"/>
+                            <constraint firstItem="cc9-Pk-CHI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="myb-yC-zAL"/>
+                            <constraint firstItem="8TG-0E-UXY" firstAttribute="trailing" secondItem="9E1-zI-58P" secondAttribute="trailing" constant="100" id="qTK-W6-A1e"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paper" width="75" height="65"/>
+        <image name="rock" width="75" height="65"/>
+        <image name="scissors" width="75" height="65"/>
+    </resources>
 </document>
