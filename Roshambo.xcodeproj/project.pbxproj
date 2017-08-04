@@ -12,6 +12,7 @@
 		036E3E291F317A47001E2241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036E3E271F317A47001E2241 /* Main.storyboard */; };
 		036E3E2B1F317A47001E2241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036E3E2A1F317A47001E2241 /* Assets.xcassets */; };
 		036E3E2E1F317A47001E2241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036E3E2C1F317A47001E2241 /* LaunchScreen.storyboard */; };
+		036E3E361F32CECE001E2241 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036E3E351F32CECE001E2241 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		036E3E2A1F317A47001E2241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		036E3E2D1F317A47001E2241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		036E3E2F1F317A47001E2241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		036E3E351F32CECE001E2241 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				036E3E231F317A47001E2241 /* AppDelegate.swift */,
 				036E3E251F317A47001E2241 /* ChoiceViewController.swift */,
+				036E3E351F32CECE001E2241 /* ResultViewController.swift */,
 				036E3E271F317A47001E2241 /* Main.storyboard */,
 				036E3E2A1F317A47001E2241 /* Assets.xcassets */,
 				036E3E2C1F317A47001E2241 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				036E3E261F317A47001E2241 /* ChoiceViewController.swift in Sources */,
 				036E3E241F317A47001E2241 /* AppDelegate.swift in Sources */,
+				036E3E361F32CECE001E2241 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
