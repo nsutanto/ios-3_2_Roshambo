@@ -28,10 +28,37 @@ class ResultViewController: UIViewController {
     // When the ResultsViewController is initialized a userChoice is passed in and an opponent's play is generated.
     var userChoice: Shape!
     
+    @IBOutlet weak var imageResult: UIImageView!
+    @IBOutlet weak var gameResult: UILabel!
+    
+    private let opponentChoice: Shape = Shape.randomShape()
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-        // Do any additional setup after loading the view.
+        displayResult()
+    }
+
+    private func displayResult() {
+        var imageName: String
+        var text: String
+        let matchup = "\(userChoice.rawValue) vs. \(opponentChoice.rawValue)"
+        
+        switch (userChoice!, opponentChoice) {
+        case let (user, opponent) where user == opponent:
+            text = "\(matchup): it's a tie!"
+            imageName = "tie"
+        case (.Rock, .Scissors), (.Paper, .Rock), (.Scissors, .Paper):
+            text = "You win with \(matchup)!"
+            imageName = "\(userChoice.rawValue)-\(opponentChoice.rawValue)"
+        default:
+            text = "You lose with \(matchup) :(."
+            imageName = "\(opponentChoice.rawValue)-\(userChoice.rawValue)"
+        }
+        
+        imageName = imageName.lowercased()
+        imageResult.image = UIImage(named: imageName)
+        gameResult.text = text
     }
 
     

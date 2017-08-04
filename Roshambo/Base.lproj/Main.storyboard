@@ -92,20 +92,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMv-le-dTW">
-                                <rect key="frame" x="97" y="313" width="181" height="41"/>
+                                <rect key="frame" x="96.5" y="513" width="181" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Let's Play Again"/>
                                 <connections>
                                     <action selector="playAgain:" destination="5Wx-lb-O4l" eventType="touchUpInside" id="UsJ-Ds-lQt"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper-rock" translatesAutoresizingMaskIntoConstraints="NO" id="fee-Ex-jVy">
+                                <rect key="frame" x="107" y="273.5" width="160" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="9At-Z8-DVc"/>
+                                    <constraint firstAttribute="height" constant="120" id="MfE-TR-QMN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPK-nC-ls1">
+                                <rect key="frame" x="138.5" y="453" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94162589311599731" green="0.73251801729202271" blue="0.75652211904525757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="BMv-le-dTW" firstAttribute="centerX" secondItem="2Uf-4n-zuM" secondAttribute="centerX" id="Syf-QR-31N"/>
-                            <constraint firstItem="BMv-le-dTW" firstAttribute="centerY" secondItem="2Uf-4n-zuM" secondAttribute="centerY" id="pqK-BB-1Lz"/>
+                            <constraint firstItem="fee-Ex-jVy" firstAttribute="centerX" secondItem="2Uf-4n-zuM" secondAttribute="centerX" id="2Ow-OW-ugs"/>
+                            <constraint firstItem="fee-Ex-jVy" firstAttribute="centerY" secondItem="2Uf-4n-zuM" secondAttribute="centerY" id="5fM-qT-dWh"/>
+                            <constraint firstItem="JPK-nC-ls1" firstAttribute="centerY" secondItem="fee-Ex-jVy" secondAttribute="centerY" constant="130" id="8eG-Mh-SN3"/>
+                            <constraint firstItem="BMv-le-dTW" firstAttribute="centerX" secondItem="fee-Ex-jVy" secondAttribute="centerX" id="CyS-uj-xBm"/>
+                            <constraint firstItem="JPK-nC-ls1" firstAttribute="centerX" secondItem="fee-Ex-jVy" secondAttribute="centerX" id="aT2-Kx-BSl"/>
+                            <constraint firstItem="BMv-le-dTW" firstAttribute="centerY" secondItem="fee-Ex-jVy" secondAttribute="centerY" constant="200" id="dT8-UV-mMn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameResult" destination="JPK-nC-ls1" id="Dne-sK-d2T"/>
+                        <outlet property="imageResult" destination="fee-Ex-jVy" id="pt6-Kc-GtI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T2A-Wy-bi6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,6 +135,7 @@
     </scenes>
     <resources>
         <image name="paper" width="75" height="65"/>
+        <image name="paper-rock" width="160" height="120"/>
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>
     </resources>
